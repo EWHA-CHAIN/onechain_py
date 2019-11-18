@@ -17,17 +17,6 @@ def start():
 def initHttpServer(/blocks):
     return bc.getBlockchain()
 
-
-@app.route('/add', methods=['POST', 'GET'])
-def add():
-    if request.method == 'POST':
-        note = Note(request.form['title'], request.form['content'])
-        db.session.add(음표)
-        db.session.commit()
-        return redirect(url_for('index'))
-
-    return render_template('add.html')
-
 @app.route('/mineBlock',methods=['POST'])
 def mining():
     if request.method == 'POST':
@@ -43,16 +32,6 @@ def mining():
 @app.route('/version',methods=['GET'])
 def checkVersion:
 
-
-@app.route('/add', methods=['POST', 'GET'])
-def add():
-    if request.method == 'POST':
-        note = Note(request.form['title'], request.form['content'])
-        db.session.add(음표)
-        db.session.commit()
-        return redirect(url_for('index'))
-
-    return render_template('add.html')
 
 def blockVersion(/blockVersion/:number):
     tempBlock = bc.getBlockchain()
